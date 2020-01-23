@@ -16,6 +16,7 @@ public class TelaLogin extends javax.swing.JFrame {
         String sql = "select * from tbusuarios where login = ? and senha = ?";
         try {
             // As linhas abaixo preparam a consulta ao Banco em função do que foi digitado nas caixas de texto
+            // O ? é substituído pelo conteúdo das variáveis
             pst = conexao.prepareStatement(sql);
             pst.setString(1, txtUsuario.getText());
             pst.setString(2, txtSenha.getText());
